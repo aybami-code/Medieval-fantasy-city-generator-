@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcane Realm Builder - Procedural Fantasy City Generator</title>
+    <meta name="description" content="Generate infinite, customizable fantasy city maps for TTRPG campaigns, world-building, and game development">
+    <meta name="keywords" content="fantasy, city, generator, procedural, TTRPG, D&D, map, world-building">
+    <meta name="author" content="Arcane Realm Builder">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏰</text></svg>">
+    
+    <!-- External Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Subtle starfield background -->
+    <div id="starfield"></div>
+    
+    <!-- Minimal top bar -->
+    <div id="top-bar">
+        <button id="generate-btn" class="btn-glow">
+            <i class="fas fa-dice-d20"></i> Generate New Realm
+        </button>
+        <button id="restore-btn">
+            <i class="fas fa-history"></i> Restore Last Map
+        </button>
+        <div class="spacer"></div>
+        <button id="support-btn" class="btn-heart">
+            <i class="fas fa-heart"></i> Support Creator
+        </button>
+        <button id="shortcuts-btn" title="Keyboard Shortcuts">
+            <i class="fas fa-keyboard"></i>
+        </button>
+    </div>
+    
+    <!-- Main canvas -->
+    <div id="canvas-container">
+        <canvas id="map-canvas"></canvas>
+        <div id="loading-overlay">
+            <div class="spinner"></div>
+            <p>Forging Realm...</p>
+        </div>
+    </div>
+    
+    <!-- Legend panel -->
+    <div id="legend-panel">
+        <!-- Legend content generated dynamically -->
+    </div>
+    
+    <!-- All JavaScript Modules -->
+    <script src="modules/Generator.js"></script>
+    <script src="modules/Renderer.js"></script>
+    <script src="modules/UI.js"></script>
+    <script src="modules/Exporter.js"></script>
+    <script src="modules/StateManager.js"></script>
+    <script src="modules/LoreGenerator.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
